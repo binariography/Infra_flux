@@ -6,9 +6,7 @@ metadata:
     app.kubernetes.io/part-of: flux
     app.kubernetes.io/component: monitoring
 spec:
-  namespaceSelector:
-    matchNames:
-      - flux-system
+  namespaceSelector: { }
   selector:
     matchExpressions:
       - key: app
@@ -20,5 +18,6 @@ spec:
           - notification-controller
           - image-automation-controller
           - image-reflector-controller
+          - webapp
   podMetricsEndpoints:
     - port: http-prom
