@@ -9,7 +9,9 @@ spec:
   interval: 1m0s
   ref:
     branch: main
-  url: https://github.com/binariography/infra_flux
+  secretRef:
+    name: flux-system
+  url: ssh://git@github.com/binariography/infra_flux
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
