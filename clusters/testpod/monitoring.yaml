@@ -32,8 +32,3 @@ spec:
     kind: GitRepository
     name: flux-system
   path: ./monitoring/configs
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: test-ns
